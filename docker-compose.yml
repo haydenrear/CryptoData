@@ -1,0 +1,113 @@
+version: "3.8"
+services:
+  GrowthValue:
+    image: mongo:latest
+    container_name: GrowthValue
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - /Users/hayde/IdeaProjects/drools/data/src/main/resources/data/database/GrowthValue:/data/db
+    ports:
+      - 27011:27017
+#    command: sh -c "data/db/load_script.sh"
+  Technology:
+    image: mongo:latest
+    container_name: Technology
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - /Users/hayde/IdeaProjects/drools/data/src/main/resources/data/database/Technology:/data/db
+    ports:
+      - 27012:27017
+#    command: sh -c "data/db/load_script.sh"
+  InterestRates:
+    image: mongo:latest
+    container_name: InterestRates
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - /Users/hayde/IdeaProjects/drools/data/src/main/resources/data/database/InterestRates:/data/db
+    ports:
+      - 27013:27017
+#    command: sh -c "data/db/load_script.sh"
+  Cyclicality:
+    image: mongo:latest
+    container_name: Cyclicality
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - /Users/hayde/IdeaProjects/drools/data/src/main/resources/data/database/Cyclicality:/data/db
+    ports:
+      - 27014:27017
+#    command: sh -c "data/db/load_script.sh"
+  Inflation:
+    image: mongo:latest
+    container_name: Inflation
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - /Users/hayde/IdeaProjects/drools/data/src/main/resources/data/database/Inflation:/data/db
+    ports:
+      - 27015:27017
+#    command: sh -c "data/db/load_script.sh"
+  WealthConcentration:
+    image: mongo:latest
+    container_name: WealthConcentration
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - /Users/hayde/IdeaProjects/drools/data/src/main/resources/data/database/WealthConcentration:/data/db
+    ports:
+      - 27016:27017
+#    command: sh -c "data/db/load_script.sh"
+
+#  StockData:
+#    image: mongo:latest
+#    container_name: MarketData
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: admin
+#      MONGO_INITDB_ROOT_PASSWORD: admin
+#    volumes:
+#      - /Users/hayde/IdeaProjects/drools/data/src/main/resources/data/database/StockData:/data/db
+#    ports:
+#      - 27017:27017
+#    command: sh -c "load_script.sh"
+#  CommoditiesData:
+#    image: mongo:latest
+#    container_name: MarketData
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: admin
+#      MONGO_INITDB_ROOT_PASSWORD: admin
+#    volumes:
+#      - /Users/hayde/IdeaProjects/drools/data/src/main/resources/data/database/CommoditiesData:/data/db
+#    ports:
+#      - 27017:27017
+#    command: sh -c "load_script.sh"
+#  CryptoData:
+#    image: mongo:latest
+#    container_name: MarketData
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: admin
+#      MONGO_INITDB_ROOT_PASSWORD: admin
+#    volumes:
+#      - /Users/hayde/IdeaProjects/drools/data/src/main/resources/data/database/CryptoData:/data/db
+#    ports:
+#      - 27017:27017
+#    command: sh -c "load_script.sh"
+#  DerivativesData:
+#    image: mongo:latest
+#    container_name: MarketData
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: admin
+#      MONGO_INITDB_ROOT_PASSWORD: admin
+#    volumes:
+#      - /Users/hayde/IdeaProjects/drools/data/src/main/resources/data/database/DerivativesData:/data/db
+#    ports:
+#      - 27017:27017
+#    command: sh -c "load_script.sh"

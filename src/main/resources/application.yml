@@ -1,0 +1,134 @@
+spring:
+  rsocket:
+    server:
+      port: 6999
+  config:
+    activate:
+      on-profile: test
+
+
+amount.dto: 30
+socket.gather.data: 3
+api.symbols: 20
+api.num.pages: 10
+
+---
+
+spring:
+  rsocket:
+    server:
+      port: 7002
+  config:
+    activate:
+      on-profile: prod
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile:
+      - test
+      - prod
+  rsocket:
+    server:
+      transport: websocket
+
+dynamic:
+  parse:
+    output: src/test/resources
+
+server:
+  port: 8081
+mongocollections:
+  GrowthValue:
+
+  Technology:
+
+  InterestRates:
+
+  Cyclicality:
+
+  Inflation:
+
+  WealthConcentration:
+
+  MarketData:
+
+
+mongorepositories:
+  GrowthValue:
+    host: localhost
+    port: 27011
+    database: GrowthValue
+    username: admin
+    password: admin
+  Technology:
+    host: localhost
+    port: 27012
+    database: Technology
+    username: admin
+    password: admin
+  InterestRates:
+    host: localhost
+    port: 27013
+    database: InterestRates
+    username: admin
+    password: admin
+  Cyclicality:
+    host: localhost
+    port: 27014
+    database: Cyclicality
+    username: admin
+    password: admin
+  Inflation:
+    host: localhost
+    port: 27015
+    database: Inflation
+    username: admin
+    password: admin
+  WealthConcentration:
+    host: localhost
+    port: 27016
+    database: WealthConcentration
+    username: admin
+    password: admin
+  MarketData:
+    host: localhost
+    port: 27017
+    database: MarketData
+    username: admin
+    password: admin
+
+binance.socket.api.url: wss://fstream.binance.com/ws
+binance.socket.api.key: goohEvt8Y7J8munmpqoennbk5CeA37igUlfTrQZUHOdQS4T8uKM0LIuHTGHwXY4x
+binance.rest.api.url: https://api.binance.com
+binance.rest.api.key: goohEvt8Y7J8munmpqoennbk5CeA37igUlfTrQZUHOdQS4T8uKM0LIuHTGHwXY4x
+
+coingecko.api.url: https://api.coingecko.com/api/v3
+messari.api.url: https://data.messari.io
+messari.api.secret: c2b7f043-c8b1-48ea-8558-36102e2125e7
+
+exchanges:
+  binanceSocketUrl: wss://fstream.binance.com/ws
+  binanceRestUrl: https://api.binance.com/api/v3
+  coinGeckoUrl: https://api.coingecko.com/api/v3
+  messariUrl: https://data.messari.io/api/v1
+  binanceApiKey: goohEvt8Y7J8munmpqoennbk5CeA37igUlfTrQZUHOdQS4T8uKM0LIuHTGHwXY4x
+
+startdate: 2020-03-07
+endDate: 2021-03-05
+
+assetlist:
+  - AAPL
+  - TSLA
+
+assetdomain: localhost
+assettype: stocks
+
+increasing: 2
+decreasing: 2
+trendreversalpriceincrease: 2
+trendreversalpricedecrease: 2
+highvolatility: 2
